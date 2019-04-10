@@ -7,7 +7,7 @@ const app = express();
 app.use(cors);
 
 const http = require('http').Server(app)
-const socketIo = require('socket.io')(server);
+const socketIo = require('socket.io')(http);
 
 socketIo.on('connection', socket => {
     socket.on('connectionRoom', box => {
